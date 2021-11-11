@@ -1,2 +1,3 @@
-#Turbo Plus
-Superfast deploy Rails applications.
+# Turbo Plus
+
+**Superfast** deploy Rails applications.
