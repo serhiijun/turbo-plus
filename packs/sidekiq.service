@@ -1,0 +1,28 @@
+[Unit]
+Description=myapp
+After=syslog.target network.target
+
+[Service]
+Type=notify
+WatchdogSec=10
+
+WorkingDirectory=/home/deploy/myapp
+ExecStart=/bin/bash /home/deploy/.rvm/gems/ruby-3.0.0@blablagemset/wrappers/bundle exec sidekiq -e production --config config/sidekiq.yml --logfile log/sidekiq.log
+
+User=deploy
+Group=deploy
+UMask=0002
+
+Environment=MALLOC_ARENA_MAX=2
+Environment="RAILS_MASTER_KEY=bla234bl23bla"
+
+RestartSec=1
+Restart=on-failure
+
+StandardOutput=syslog
+StandardError=syslog
+
+SyslogIdentifier=sidekiq
+
+[Install]
+WantedBy=multi-user.target
