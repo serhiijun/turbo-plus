@@ -1,0 +1,4 @@
+Host best_host_name
+    HostName 00.00.00.00
+    User deploy
+    IdentityFile ~/.ssh/id_rsa
