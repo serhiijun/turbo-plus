@@ -26,3 +26,10 @@
 
 #-> using for RVM. May exist in .bashrc but shit happend :)
 #export PATH="$PATH:$HOME/.rvm/bin"
+
+if [ ! -f "$HOME/_turboenv.bash"]; then
+  touch "$HOME/_turboenv.bash"
+  . ~/_turboenv.bash
+else
+  . ~/_turboenv.bash
+fi
