@@ -41,4 +41,4 @@ _git_status() {
   fi
 }
 
-export PS1='💎 \[\e[35m\]\[\e[1m\]$(gemset_name)\[\e[0m\]\[\e[0m\] \[\e[97m\]\[\e[1m\]➜ \[\e[0m\]\[\e[0m\]\[\e[96m\]\[\e[1m\]\w\[\e[0m\]\[\e[0m\] \[\e[31m\]\[\e[1m\]$(_git_branch)\[\e[0m\]\[\e[0m\] \[\e[31m\]\[\e[1m\]$(_git_status)\[\e[0m\]\[\e[0m\]'
+export PS1='💎 \[\e[35m\]\[\e[1m\]$(_gemset_name)\[\e[0m\]\[\e[0m\] \[\e[97m\]\[\e[1m\]➜ \[\e[0m\]\[\e[0m\]\[\e[96m\]\[\e[1m\]\w\[\e[0m\]\[\e[0m\] \[\e[31m\]\[\e[1m\]$(_git_branch)\[\e[0m\]\[\e[0m\] \[\e[31m\]\[\e[1m\]$(_git_status)\[\e[0m\]\[\e[0m\]'

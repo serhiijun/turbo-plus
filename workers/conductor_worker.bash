@@ -53,7 +53,11 @@ _iterate_content () {
 _conductor () {
   local C_FOLDER=$(basename $CURRENT)
   local TO_FOLDER="$HOME/apps/$C_FOLDER"
+  local APPS_PATH="$HOME/apps"
 
+  if [ ! -d "$APPS_PATH" ]; then
+    mkdir "$APPS_PATH"
+  fi
   if [ -d "$TO_FOLDER" ]; then
     read -p "$(echo -e "Directory exists. Remove ${BYellow}$(basename $TO_FOLDER)${NOCOLOR}? [y/n] ")" -n 1 -r
     echo
