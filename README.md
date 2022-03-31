@@ -24,5 +24,11 @@ $ turbo send
 ```Bash
 # setups jobs for deploy
 # you should to still stay in your git downloaded folder
-$ turbo brew
+$ turbo build
+```
+
+```Bash
+# restart nginx or sidekiq
+# you should to still stay in your git downloaded folder
+$ turbo restart ng (sq)
 ```

@@ -2,6 +2,7 @@
 . ~/turbo-plus/packs/aliases.bash
 . ~/turbo-plus/workers/conductor_worker.bash
 . ~/turbo-plus/workers/bridge_worker.bash
+. ~/turbo-plus/workers/proxy_worker.bash
 . ~/turbo-plus/packs/turboenv.bash
 . ~/turbo-plus/packs/ps1.bash
 _action () {
@@ -11,9 +12,13 @@ _action () {
     "send" )
       _conductor
       ;;
-    "brew" )
+    "build" )
       _bridge 
       ;;
+    "restart" )
+      _proxy $2
+      ;;
+
   esac
 }
 
