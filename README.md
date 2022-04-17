@@ -9,6 +9,10 @@ Copy file from server to local computer (Mac OS)
 scp deployuser@myapp.com:/home/deployuser/filename /Users/localuser/Desktop/filename
 ```
 
+```
+insert this in .bash_profile file ->>>>> source "$HOME/turbo-plus/app.bash"
+```
+
 
 Connect to some host is easy now:
 ```Bash
