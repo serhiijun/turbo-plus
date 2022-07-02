@@ -1,0 +1,25 @@
+[Unit]
+Description=AnyCable Go WebSocket Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/someusername/go/bin/anycable-go
+ExecStop=/bin/kill -TERM $MAINPID
+
+User=someusername
+Group=someusername
+UMask=0002
+LimitNOFILE=16384
+
+Restart=on-failure
+Environment="ANYCABLE_HOST=maybesubdomain.domain.com"
+Environment="ANYCABLE_PORT=8080"
+Environment="ANYCABLE_PATH=/cable"
+Environment="ANYCABLE_REDIS_URL=redis://localhost:6379/1"
+Environment="ANYCABLE_REDIS_CHANNEL=__anycable__"
+Environment="ANYCABLE_RPC_HOST=localhost:50051"
+Environment="ANYCABLE_METRICS_HTTP=/metrics"
+
+[Install]
+WantedBy=multi-user.target
