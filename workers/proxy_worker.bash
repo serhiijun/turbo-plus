@@ -9,6 +9,12 @@ _proxy () {
     echo 'restarting sidekiq'
     sudo service sidekiq restart
     ;;
+  "go" )
+    echo 'restarting anycable-go'
+    sudo service anycable-go restart
+   "rpc" )
+    echo 'restarting anycable-rpc'
+    sudo service anycable-rpc restart
   #"ps" )
   #  local PWD="$(pwd)"
   #  echo 'restarting passenger'
