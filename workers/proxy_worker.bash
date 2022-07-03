@@ -12,14 +12,15 @@ _proxy () {
   "go" )
     echo 'restarting anycable-go'
     sudo service anycable-go restart
-   "rpc" )
+    ;;
+  "rpc" )
     echo 'restarting anycable-rpc'
     sudo service anycable-rpc restart
-  #"ps" )
-  #  local PWD="$(pwd)"
-  #  echo 'restarting passenger'
-  #  sudo passenger-config restart-app "$HOME/apps/$(basename $PWD)"
-  #  ;;
-
+    ;;
+  "ps" )
+    local PWD="$(pwd)"
+    echo 'restarting passenger'
+    sudo passenger-config restart-app "$HOME/apps/$(basename $PWD)"
+    ;;
   esac
 }
